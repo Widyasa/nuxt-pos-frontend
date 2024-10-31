@@ -6,11 +6,15 @@ import InputCrud from "~/components/dashboard/input-crud.vue";
 import {productValidation} from "~/validations/productValidation";
 import InputSelect from "~/components/dashboard/input-select.vue";
 const productCategory = useProductCategoryStore()
+const inputCategory = reactive({
+  product_category_id : null
+})
 const isLoading = ref(false)
 const emit = defineEmits(['actionSuccess'])
 const product = useProductStore()
 const createData = async (values) => {
   isLoading.value = true
+  values.product_category_id = inputCategory.product_category_id
   await product.createProduct(values)
   if (product.isSuccess == true) {
     product.isSuccess = false
@@ -24,6 +28,7 @@ const createData = async (values) => {
   <Form @submit="createData" class="bg-white" :validation-schema="productValidation">
     <div class="grid grid-cols-1 gap-4" >
       <input-select
+          v-model="inputCategory.product_category_id"
           input-title="Product Category"
           input-name="product_category_id"
           value="value"

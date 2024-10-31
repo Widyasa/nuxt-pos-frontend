@@ -8,7 +8,10 @@ import SidebarNav from "~/components/dashboard/sidebar-nav.vue";
   <div class="bg-white min-h-screen h-full">
     <div class="px-8">
       <div class="pt-5 flex-col flex items-center">
-        <i class="fa-solid fa-car text-7xl mt-2"></i>
+        <div class="flex gap-3 items-center">
+          <i class="fa-solid fa-cash-register text-5xl text-primary"></i>
+          <h1 class="text-2xl font-semibold text-primary">Musang Cashier</h1>
+        </div>
         <div class="mt-10 flex flex-col gap-4 self-start w-full">
             <sidebar-nav nav-route="/dashboard" nav-name="Dashboard">
               <i class="fa-solid fa-table-columns"></i>
