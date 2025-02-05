@@ -32,7 +32,7 @@ currentPage.value = 1
 const showSuccess = () => {
   toast.add({ severity: 'success', summary: 'Success', detail: message.value, life: 3000 });
 }
-const getId = (theId:string) => {
+const getId = (theId:number) => {
   id.value = theId
 }
 await getAll()

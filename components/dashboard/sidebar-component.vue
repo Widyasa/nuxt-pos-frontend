@@ -22,6 +22,9 @@ import SidebarNav from "~/components/dashboard/sidebar-nav.vue";
             <sidebar-nav nav-route="/dashboard/product" nav-name="Products">
               <i class="fa-solid fa-inbox"></i>
             </sidebar-nav>
+            <sidebar-nav nav-route="/dashboard/transaction" nav-name="Transaction">
+              <i class="fa-solid fa-money-bill"></i>
+            </sidebar-nav>
         </div>
       </div>
     </div>

@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig : {
     public : {
-      apiUrl: process.env.API_ENDPOINT
+      apiUrl: 'http://localhost:8000/api/'
     }
   },
   modules :['@primevue/nuxt-module', '@pinia/nuxt','@pinia-plugin-persistedstate/nuxt', '@vee-validate/nuxt',],
